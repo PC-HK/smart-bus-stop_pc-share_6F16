@@ -1,5 +1,6 @@
 let nop = 0
 basic.forever(function () {
+    nop = 0
     if (pins.analogReadPin(AnalogPin.P0) < 200) {
         nop += 1
     }
@@ -8,8 +9,4 @@ basic.forever(function () {
     }
     basic.showNumber(nop)
     basic.pause(200)
-    nop = 0
-})
-basic.forever(function () {
-    basic.pause(1000)
 })
